@@ -47,5 +47,31 @@ public int  reading (int readingOne, int readingTwo) {
 	return read;
 }
 
+public double costCalculation ( int read, double multiplier, double charges) {
+double finalCharges =0;
+finalCharges = (read * multiplier) + charges; 
+return finalCharges;	
 }
+public double carbonTaxCalculation(int read, double multiplier1, double multiplier2) {
+	double carbTaxCharg =0;
+	carbTaxCharg =  multiplier1 *read * multiplier2;
+	return carbTaxCharg; 
+}
+     public double surchargeTaxCalculation(double multiplier3, double multiplier4, double finalCharges ) {
+    	 double surcharge =0, gstCharge=0,totgstsurcharge=0;
+    	 surcharge = finalCharges * multiplier3;
+    	  gstCharge = finalCharges * multiplier4;
+    	  totgstsurcharge = surcharge + gstCharge;
+    	  return totgstsurcharge;
+    
+         }
+     public double totalElectricCharges (double finalCharges, double carbTaxCharg, double totgstsurcharge) {
+    	 double totElecCharg =0;
+    	 totElecCharg = finalCharges + carbTaxCharg + totgstsurcharge; 
+    	 return totElecCharg;
+     }
+}  
+     
+
+
 
